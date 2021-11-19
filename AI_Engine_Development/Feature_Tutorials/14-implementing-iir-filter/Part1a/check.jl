@@ -3,7 +3,7 @@ using PyPlot
 using DelimitedFiles
 
 # specify workspace directory
-ws_dir = "/home/louiev/workspace_21.2/aie_iir_1a/";
+ws_dir = "{specify_workspace}";
 
 
 ref_file = ws_dir * "data/impresponse.dat";				# impulse response from Julia
