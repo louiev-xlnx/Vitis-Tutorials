@@ -224,7 +224,7 @@ Notes:
 
 ## Building and Running the Design
 
-We will use `Emulation-SW` to verify the functionality of the design. Similar to Part1a, we may use Julia to calculate the maximum value of the absolute error between the reference and the generated impulse response. The impulse response error for this 3 stage design is shown below.
+We will use `Emulation-SW` to verify the functionality of the design. Similar to Part1a, we may use Julia to calculate the maximum value of the absolute error between the reference and the generated impulse response (run `check1.jl`). The impulse response error for this 3 stage design is shown below.
 
 ![Fig. 2](./images/impresp_error.PNG "Impulse Response Error")
 
