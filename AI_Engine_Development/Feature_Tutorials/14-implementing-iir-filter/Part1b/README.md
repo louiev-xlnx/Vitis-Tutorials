@@ -253,7 +253,7 @@ In the testbench (`tb.cpp`), we *uncomment* `#define RTP_SWITCH` to include the 
 
 Note that a `wait()` statement is *required* to allow the specified number of iterations to complete before loading the new set of coefficients.
 
-The output of the AI engines is shown below.
+The output of the AI engines is shown below (use `check2.jl`).
 
 ![Fig. 5](./images/switched_output.PNG "AI Engine Output with Coefficient Switching")
 
