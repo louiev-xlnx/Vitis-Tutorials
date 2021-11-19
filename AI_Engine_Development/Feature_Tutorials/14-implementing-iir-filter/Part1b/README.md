@@ -22,14 +22,22 @@ In this section, we will show how to modify the ADF graph and the testbench for 
 In its pristine state, the user parameters are as shown below:
 
 ```Julia
-fp = 10.0e6             # passband frequency
+first_set = true;	# true: 1st set; false: 2nd set
+
+if first_set
+    fp = 10.0e6         	# passband frequency
+    coeff_file_suffix = "a"	# file suffix to distinguish different coefficient sets
+                        	# with the same architecture
+else
+    fp = 20.0e6         	# passband frequency
+    coeff_file_suffix = "b" 	# 2nd set of coefficients
+end # if first_set
+    
 fs = 100.0e6            # sampling frequency
 p = 6                   # no. of poles
 rp = 0.1                # passband ripple (dB)
 rs = 80.0               # stopband attenuation (dB)
 N = 256                 # no. of samples for impulse response
-coeff_file_suffix = "a" # file suffix to distinguish different coefficient sets
-                        # with the same architecture
 show_plots = true       # display plots?
 write_cmatrix = true    # write C matrix to files?
 write_impulse = true    # write impulse response?
