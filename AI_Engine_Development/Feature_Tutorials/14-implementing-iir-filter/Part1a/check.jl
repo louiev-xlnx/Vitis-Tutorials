@@ -2,9 +2,8 @@ using Printf
 using PyPlot
 using DelimitedFiles
 
-# specify workspace directory
-ws_dir = "{specify_workspace}";
-
+# workspace directory is current directory
+ws_dir = pwd() * "/";
 
 ref_file = ws_dir * "data/impresponse.dat";				# impulse response from Julia
 dut_file = ws_dir * "Emulation-SW/x86simulator_output/output.dat";	# impulse response from AI engine simulation
