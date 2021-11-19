@@ -9,6 +9,8 @@
 
 # Implementing an IIR Filter on the AI Engine - Part 1b
 
+***Version: Vitis 2021.2***
+
 ## Recap
 
 In Part 1a, we showed the process of calculating 8 outputs of a second order section of an IIR filter *in parallel* using the AI engine.
