@@ -48,6 +48,8 @@ This will plot the filter characteristics and generate three coefficient files (
 
 The kernel code will remain the same, but the ADF graph and testbench must be slightly modified to accommodate the additional sections.
 
+Move the generated `*.dat` files into the `data` directory and the generated `*.h` files (coefficient files) into the `src` directory.
+
 ## Adaptive Dataflow (ADF) Graph
 
 The modified ADF graph may look something like this:
