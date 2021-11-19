@@ -230,19 +230,18 @@ We will use `Emulation-SW` to verify the functionality of the design. Similar to
 
 ## Changing Coefficients During Runtime
 
-We modify the `fp` and `coeff_file_suffix` parameters in `aie_iir_1b.jl` as shown below to generate another set of coefficients for an LPF with a passband of 20MHz.
+We modify the `first_set` to `false` in `aie_iir_1b.jl` as shown below to generate another set of coefficients for an LPF with a passband of 20MHz.
 
 ```Julia
-fp = 20.0e6             # passband frequency
-...
-coeff_file_suffix = "b" # file suffix to distinguish different coefficient sets
-                        # with the same architecture
+first_set = false;	# true: 1st set; false: 2nd set
 ...
 ```
 
 The frequency response with a 20MHz passband is shown below.
 
 ![Fig. 3](./images/filt20.PNG "6th order elliptical LPF, BW=20MHz")
+
+Move the generated `*.h` (coefficient files) to `src` and `impresponse_b.dat` to `data`.
 
 We will use `two_freqs.jl` to generate an input signal (`two_freqs.dat`) with two frequencies (f1 = 2MHz, f2 = 18MHz) to test the functionality of coefficient switching. The time and frequency domain plots of the signal are shown below.
 
