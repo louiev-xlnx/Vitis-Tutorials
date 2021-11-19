@@ -23,7 +23,7 @@ This tutorial assumes that the reader is familiar with the fundamentals of AI en
 
 Please use the [AI Engine, DSP IP and Tools](https://forums.xilinx.com/t5/AI-Engine-DSP-IP-and-Tools/bd-p/dspip_tools) forum for any questions regarding this tutorial.
 
-This tutorial was developed and tested using Vitis 2021.1.
+This tutorial was developed and tested using Vitis 2021.2.
 
 ### Support
 
