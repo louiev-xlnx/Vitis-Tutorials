@@ -230,7 +230,7 @@ We will use `Emulation-SW` to verify the functionality of the design. Similar to
 
 ## Changing Coefficients During Runtime
 
-We modify the `first_set` to `false` in `aie_iir_1b.jl` as shown below to generate another set of coefficients for an LPF with a passband of 20MHz.
+We set `first_set` to `false` in `aie_iir_1b.jl` as shown below to generate another set of coefficients for an LPF with a passband of 20MHz.
 
 ```Julia
 first_set = false;	# true: 1st set; false: 2nd set
@@ -246,6 +246,8 @@ Move the generated `*.h` (coefficient files) to `src` and `impresponse_b.dat` to
 We will use `two_freqs.jl` to generate an input signal (`two_freqs.dat`) with two frequencies (f1 = 2MHz, f2 = 18MHz) to test the functionality of coefficient switching. The time and frequency domain plots of the signal are shown below.
 
 ![Fig. 4](./images/two_freqs.PNG "Input Signal with Two Frequency Components")
+
+Move the generated `two_freqs.dat` to `data`.
 
 In the testbench (`tb.cpp`), we *uncomment* `#define RTP_SWITCH` to include the second set of coefficients.
 
