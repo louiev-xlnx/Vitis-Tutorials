@@ -399,6 +399,8 @@ julia> maximum(abs.(err))
 The resulting Julia plot of the impulse response error is shown below.
 ![Fig. 2](./images/impresp_error.PNG "Impulse Response Error")
 
+You may also try modifying and running `check.jl`.
+
 Since the maximum of the absolute error is less than the [machine epsilon](https://en.wikipedia.org/wiki/Machine_epsilon) for [binary32](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) (`Float32` in Julia), we can conclude that the kernel code is working as expected.
 
 The complete design is included in the `data` and `src` directories. Refer to the aie_exp/Part1 tutorial if you are unfamiliar with building a Vitis design from scratch.
